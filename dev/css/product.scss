@@ -1,0 +1,174 @@
+// colors
+$color-white: #fff;
+
+// color blue
+$color-blue_w: #709ce7;
+$color-blue_l: #1a46b1;
+
+// color grey
+$color-grey: #9E9E9E;
+$color-grey_l: #E0E0E0;
+
+.product {
+	float: left;
+
+	width: 100%;
+	max-width: 240px;
+	height: 320px;	
+
+	&_pop {
+		padding: 5px;
+		border-radius: 3px;
+		background: $color-white;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 4px 10px rgba(0,0,0,0.22);
+	}
+
+	&__list {
+		padding-top: 56px;
+	}
+
+	&__cover {
+		position: relative;
+		width: 100%;
+		height: 230px;
+		overflow: hidden;
+
+		border-radius: 3px;
+		background: $color-grey_l;
+	}
+
+	&__img{
+		width: 100%;
+	}
+
+	&__info {
+		position: relative;
+		padding: 15px;
+	}
+
+	&__name {
+		display: block;
+		margin-bottom: 7px;
+
+		color: $color-blue_l;
+		font-size: 24px;
+		font-weight: 300;
+
+		text-align: center;
+		line-height: 24px;
+	}
+
+	&__cost {
+		top: 15px;
+		font-size: 14px;
+		font-weight: 500;
+		color: $color-grey;
+		text-align: center;
+	}
+}
+
+.product_shop_name{
+	color: grey;
+	cursor: pointer;
+}
+
+.product_title_name{
+	font-size: 60px;
+	margin-left: 560px;
+	margin-bottom: 15px;
+}
+.product_main{
+	padding-top: 50px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.product_profile_main{
+	display: table;
+	box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+	width: 80%;
+	margin: 0 auto;
+	padding: 40px;
+	margin-top: 100px;
+}
+.product_box_icon{
+	margin-left: 6px;
+	color: white;
+}
+.product_profile_image{
+	margin: 10px;
+	float: left;
+	width: 300px;
+	height: 300px;
+}
+
+.product_text{
+	width: 250px;
+	color: grey;
+	margin-bottom: 30px;
+	font-size: 15px;
+}
+
+.product_profile_cost{
+	font-size: 30px;
+	float: left;
+	color: #F44336;	
+}
+
+.product_profile_descript{
+	float: left;
+	padding-left: 100px;
+	font-size: 57px;
+}
+
+.product_box_main{
+	width: 80%;
+	margin: 0 auto;
+	margin-top:100px;
+}
+
+.product_box_image{
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+}
+.product_box_name{
+	float: left;
+	font-size: 40px;
+	margin-top: 70px;
+	margin-left: 80px;
+}
+.product_box_cost{
+	float: left;
+	color: #F44336;
+	margin-top: 90px;
+	margin-left: 50px;
+}
+.product_box_date{
+	float: left;
+	margin-top: 90px;
+	margin-left: 50px;
+	color: grey;
+}
+.product_number{
+	font-size:30px;
+}
+.product_number_value{
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.product_box_number_value{
+	margin-top: 93px;
+	margin-left: 40px;
+}
+
+.product_box{
+	display: table;
+	box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+	width: 100%;
+	padding: 10px;
+	margin-top: 50px;
+}

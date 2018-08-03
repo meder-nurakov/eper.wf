@@ -1,0 +1,38 @@
+$color-white: #fff;
+$color-blue_d: #0f2868;
+$color-blue_w: #709ce7;
+$color-pink: #fa244a;
+
+// hero
+.hero {
+  width: 100%;
+
+  &_full {
+    height: calc(100vh - 64px);
+  }
+
+  &_index {
+    background: url('/img/bac/index.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__content {
+    padding-top: 200px;
+  }
+
+  &__headline {
+    display: block;
+    margin-bottom: .7em;
+
+    font-size: 56px;
+    font-weight: 300;
+    color: $color-white;
+
+    line-height: 1;
+
+    & b {
+      font-weight: 700;
+    }
+  }
+}

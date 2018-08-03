@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+
+}
+
+body {
+  font-family: "sf", Segoe UI, 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+:root {
+  font-size: 17px;
+}
+// adaptability
+@media (max-width: 550px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+// container
+.container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+// narrow
+.narrow {
+  width: 50%;
+  
+  &_2 {
+    width: 41.66667%;
+  }
+
+  &_3 {
+    width: 33.33333%;
+  }
+
+  &_4 {
+    width: 25%;
+  }
+  
+  &_5 {
+    width: 16.66667%;
+  }
+
+  &_6 {
+    width: 8.33333%;
+  }    
+}
+// adataptabiliry
+@media (max-width: 550px) {
+  .narrow {
+    width: 100%;
+
+    &_2 {
+      width: 100%;
+    }
+  }
+}
+// end
+
+
+/* wide */
+.wide {
+  width: 58.33333%;
+
+  &_2 {
+    width: 66.66667%;
+  }
+
+  &_3 {
+    width: 75%;
+  }
+
+  &_4 {
+    width: 83.33333%;
+  }
+
+  &_5 {
+    width: 91.66667%;
+  }
+
+  &_6 {
+    width: 100%;
+  }
+}
+// adaptability
+@media (max-width: 550px) {
+  .wide {
+    width: 100%;
+  }
+}
+/* wide end */
+
+/* float */
+.fl {
+  &_l {
+    float: left;
+  }
+  &_r {
+    float: right;
+  }
+
+  &_c {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* fl end */
+
+// page
+#page {
+  &__layout {
+    width: calc(100% - 64px);
+    float: right;
+  }
+}

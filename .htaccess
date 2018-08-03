@@ -1,0 +1,11 @@
+#кодировка сайта
+AddDefaultCharset UTF-8
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteEngine on
+REWriteRule ^(.*) index.php
+
+# Запрет листинга каталогов
+#Options -Indexes

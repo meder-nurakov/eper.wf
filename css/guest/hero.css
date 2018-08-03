@@ -1,0 +1,19 @@
+.hero {
+  width: 100%; }
+  .hero_full {
+    height: calc(100vh - 64px); }
+  .hero_index {
+    background: url("/img/bac/index.jpg");
+    background-size: cover;
+    background-position: center; }
+  .hero__content {
+    padding-top: 200px; }
+  .hero__headline {
+    display: block;
+    margin-bottom: .7em;
+    font-size: 56px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1; }
+    .hero__headline b {
+      font-weight: 700; }

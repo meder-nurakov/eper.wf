@@ -1,0 +1,16 @@
+$color-white: #fff;
+$color-blue_d: #0f2868;
+$color-blue_w: #709ce7;
+$color-pink: #fa244a;
+
+// footer
+.footer {
+  &__row {
+    float: left;
+    margin-left: 40px;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}

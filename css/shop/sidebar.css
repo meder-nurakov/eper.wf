@@ -1,0 +1,21 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  background: #fff;
+  border-right: 1px solid #E0E0E0; }
+  .sidebar__item {
+    display: block;
+    height: 64px;
+    box-sizing: border-box;
+    padding: 12px 12px; }
+  .sidebar__link {
+    text-align: center; }
+  .sidebar__icon {
+    display: block;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #1a46b1; }

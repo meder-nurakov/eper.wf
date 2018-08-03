@@ -1,0 +1,37 @@
+.maindiv{
+	border: solid 1px white;
+	padding: 9%;
+}
+.contact_head{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+	color:#0f2868;
+}
+.contact_text{
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 60px;
+	color:grey;
+}
+.contact_email{
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+.contact_phone{
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+.contact_location{
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+.contact_icon{
+	font-size:40px;
+	color:#0f2868;
+	margin-bottom: 20px;
+}

@@ -1,0 +1,14 @@
+<?
+	$id = $_SESSION['product_id'];
+	$db = Db::connect();
+	$sql = "SELECT * FROM `product` WHERE `id` = $id";
+
+	$result = $db->prepare($sql);
+
+	if ($result->execute())
+	{
+		$row = $result->fetch();
+		$id = $row['id'];
+		?> <div class="product_profile_main"><a href="../kalem"><h2 class="product_shop_name">Kalem</h2></a><img class="product_profile_image" src="../../../img/product/<?echo$id.'.'.$row['img']?>"><h1 class="product_title_name"><?echo $row['name'];?></h1><div class="product_profile_descript"><p class="product_profile_cost"><?echo $row['cost']?> сом</p><br><p class="product_text"><?echo $row['descript'];?> </p></div><div class="product_profile_descript"><form action="add_box?id=<?echo $id?>" method="POST"><h1 class="product_number">Количество:</h1><select class="product_number_value" name="number"> <?for($i = 1; $i <= 100; $i++){?> <option><?echo $i;?> шт.</option> <?}?> </select> <input class="button button_registry button_wide" type="submit" name="add_box" value="В Корзину" style="background: #fa244a;"></form></div></div> <?
+	}	
+?>

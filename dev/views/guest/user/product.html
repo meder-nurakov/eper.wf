@@ -1,0 +1,39 @@
+<?
+	$db = Db::connect();
+
+	$sql = "SELECT * FROM `product`;";
+
+	$result = $db->prepare($sql);
+
+	$result->execute();
+	?>
+	<div class = "product_main">
+	<?
+
+	while ($row = $result->fetch())
+	{
+		if (!$row['show'])
+			continue;
+		$id = $row['id'];
+		?>
+		<a href="/user/product?id=<?echo $id?>"><div class = "product">
+		<?
+			$type = $row['img'];
+			?>
+			<img class = "product_image" src="../../../img/product/<?echo$id.'.'.$type?>"">
+			<div class = "product_descript">
+			<p class = "product_name"><?echo $row['name'];?></p>
+			<p class = "product_cost"><?echo $row['cost'];?> сом</p>
+			</div>
+			<?
+			
+		?>
+		</div></a>
+		<?
+
+	}
+	
+	?>
+	</div>
+	<?
+?>

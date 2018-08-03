@@ -1,0 +1,19 @@
+.fb__wrap {
+  display: flex;
+  align-items: center; }
+
+.fb__cover {
+  width: 400px;
+  height: 400px;
+  flex-basis: 400px;
+  flex-grow: 1;
+  float: left;
+  overflow: hidden;
+  border-radius: 7px; }
+
+.fb__img {
+  display: table;
+  height: 100%; }
+
+.fb__content {
+  padding-left: 64px; }

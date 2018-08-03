@@ -1,0 +1,101 @@
+<?
+	$db = Db::connect();
+
+	if (isset($_COOKIE['user_is']) && $_COOKIE['user_is'] == 1)
+	{
+		$id = $_COOKIE['user_id'];
+		$sql = "SELECT * FROM `want_buy` WHERE `user_id` = $id";
+
+		$result = $db->prepare($sql);
+		$result -> execute();
+		?><div class = "product_box_main"><?
+		
+		while ($row = $result->fetch())
+		{
+			$id = $row['product_id'];
+			$sql = "SELECT * FROM `product` WHERE `id` = $id";
+
+			$b = $db->prepare($sql);
+			$b->execute();
+			$a = $b->fetch();
+
+			?>
+				<div class = "product_box">
+					<img class = "product_box_image" src="../../../img/product/<?echo $id.'.'.$a['img']?>">
+					<p class = "product_box_name"><?echo $a['name'];?></p>
+					<p class = "product_box_cost"><?echo $a['cost']?> сом</p>
+					<p class = "product_box_date"><?echo date("Y-m-d H:i:s", $row['dr']);?></p>
+				
+					<div>
+						<form method = "POST" action = "/do?id=<?echo $id?>">
+							<select class="product_box_number_value" name = "number">
+								<option><?echo $row['number'];?> шт.</option>
+								<?for($j = 1; $j <= 100; $j++){ if ($a['number'] == $j) continue;?>
+								<option><?echo $j;?> шт.</option>
+								<?}?>
+							</select>
+
+							<input type="submit" name = "is_del" value = "Удалить">
+							<input type="submit" name = "is_buy" value = "Купить">
+						</form>
+					</div>
+					<div>
+						<p id = "timer">____asdasd</p>
+					</div>			
+				</div>
+			<?
+		}
+
+		?></div><?
+	}
+	else
+	{
+		if (!isset($_SESSION['box_product']))
+			$sz = 0;
+		else 
+		{	
+			$a = $_SESSION['box_product'];
+			$b = $_SESSION['box_time'];
+			$sz = sizeof($a);
+		}
+
+		?><div class = "product_box_main"><?
+		for ($i = 0; $i < $sz; $i++)
+		{
+			if ($_SESSION['box_was_deleted'][$i] == 1)
+				continue;
+
+			$id = $a[$i];
+
+			$sql = "SELECT * FROM `product` WHERE `id` = $id";
+
+			$result = $db->prepare($sql);
+			$result->execute();
+			$row = $result->fetch();
+			?>
+				<div class = "product_box">
+					<img class = "product_box_image" src="../../../img/product/<?echo$id.'.'.$row['img']?>">
+					<p class = "product_box_name"><?echo $row['name'];?></p>
+					<p class = "product_box_cost"><?echo $row['cost']?> сом</p>
+					<p class = "product_box_date"><?echo date("Y-m-d H:i:s", $b[$i]);?></p>					
+
+					<div>
+						<form method = "POST" action = "/do?id=<?echo $id;?>">
+							<select class="product_box_number_value" name = "number">
+								<option><?echo $_SESSION['box_number'][$i];?> шт.</option>
+								<?for($j = 1; $j <= 100; $j++){ if ($_SESSION['box_number'][$i] == $j) continue;?>
+								<option><?echo $j;?> шт.</option>
+								<?}?>
+							</select>
+							<input type="submit" name = "is_del" value = "Удалить">
+							<input type="submit" name = "is_buy" value = "Купить">
+						</form>
+					</div>
+				</div>
+			<?
+		}
+		?></div><?
+	}
+?>
+<script type="text/javascript" src="../../../js/timer.js"></script>
+<script type="text/javascript" src="../../../js/jquery-3.3.1.min.js"></script>

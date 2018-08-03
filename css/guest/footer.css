@@ -1,0 +1,5 @@
+.footer__row {
+  float: left;
+  margin-left: 40px; }
+  .footer__row:first-child {
+    margin-left: 0px; }

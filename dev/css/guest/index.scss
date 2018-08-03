@@ -1,0 +1,28 @@
+// for business
+.fb {
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__cover {
+    width: 400px;
+    height: 400px;
+    flex-basis: 400px;
+    flex-grow: 1;
+
+    float: left;
+    overflow: hidden;
+
+    border-radius: 7px;
+  }
+
+  &__img {
+    display: table;
+    height: 100%;
+  }
+
+  &__content {
+    padding-left: 64px;
+  }
+}

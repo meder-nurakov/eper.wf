@@ -1,0 +1,49 @@
+// colors
+$color-white: #fff;
+
+// color blue
+$color-blue_w: #709ce7;
+$color-blue_l: #1a46b1;
+
+// color grey
+$color-grey_l: #E0E0E0;
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 64px;
+  background: $color-white;
+  border-right: 1px solid $color-grey_l;
+
+  &__list {
+
+  }
+
+  &__item {
+    display: block;
+    height: 64px;
+
+    box-sizing: border-box;
+
+    padding: 12px 12px;
+  }
+
+  &__link {
+    text-align: center;
+  }
+
+
+  &__icon {
+    display: block;
+    width: 40px;
+    text-align: center;
+
+    line-height: 40px;
+
+    color: $color-blue_l;
+  }
+}
